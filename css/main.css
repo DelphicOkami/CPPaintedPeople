@@ -7,11 +7,20 @@
     text-align: center;
 }
 
-.entry .signed {
+.entry > .signed {
     display: block;
     text-align: right;
 }
 
-#moon {
+.bryn_tan > .signed span {
+    display: none;
+}
+
+.alwaysTyped {
+    font-family: arial, serif;
+    font-size: 1.25em;
+}
+
+#moon, #typed {
     display: none;
 }

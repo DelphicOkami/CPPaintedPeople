@@ -1,0 +1,17 @@
+#Loader, #PageContents{
+    padding-top: 2em;
+    display: none;
+}
+
+#Loader {
+    text-align: center;
+}
+
+.entry .signed {
+    display: block;
+    text-align: right;
+}
+
+#moon {
+    display: none;
+}

@@ -96,7 +96,7 @@ function setupMenu() {
             $('.menuItem').click(function (e) {
                 e.preventDefault();
                 let page = $(e.currentTarget).attr('href')
-                window.location = window.location.origin + window.location.pathname + '/#/' + page;
+                window.location = window.location.origin + window.location.pathname + '#/' + page;
                 getPage(page);
             });
         }

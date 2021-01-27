@@ -121,7 +121,7 @@ function arrayToLi(menuItems) {
                 ' <span class="caret"></span></a>' + list + '</li>';
         } else {
             let url = (menuItem.hasOwnProperty('url') ? menuItem.url : menuItem.title.toLowerCase().replace(' ', '-'))
-            renderedItems += '<li><a class="menuItem" href="/#/' + url + '">' + menuItem.title + '</a></li>'
+            renderedItems += '<li><a class="menuItem" href="' + url + '">' + menuItem.title + '</a></li>'
         }
     }
     return renderedItems;

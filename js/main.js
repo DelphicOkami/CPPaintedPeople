@@ -1,6 +1,7 @@
 let Loader;
 let PageContents;
 let ErrorContents;
+let loading;
 $(document).ready(function () {
     PageContents = $('#PageContents');
     Loader = $('#Loader');
@@ -19,7 +20,7 @@ $(document).ready(function () {
 function getPage(page) {
     PageContents.hide().empty();
     Loader.show();
-    $.get(
+    loading = $.get(
         "pages/" + page + '.yaml',
         // Success
         function (data) {

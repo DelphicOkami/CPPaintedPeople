@@ -11,6 +11,9 @@ $(document).ready(function () {
     setupModeSwitches();
     getPage(page);
     setupMenu();
+    window.onhashchange = function() {
+        getPage($(location).attr('hash').substring(2) || 'home')
+    }
 });
 
 function getPage(page) {

@@ -26,3 +26,22 @@
 }
 
 .row { padding-bottom: 3em }
+
+.entry > p > img {
+    padding-right: 1em;
+    display: inline-flex;
+    float: left;
+}
+
+.entry > p {
+    display: inline-block;
+}
+
+.entry > :first-child{
+    margin-top: 1em;
+}
+
+.signed > span {
+    font-family: 'Dancing Script', arial, serif;
+    font-size: 2em
+}

@@ -4,7 +4,11 @@
     "url": "home"
   },
   {
-    "title": "Important People",
+    "title": "Who are we?",
+    "url": "who-are-we"
+  },
+  {
+    "title": "Walking Legends",
     "entries": [
       {
         "title": "Taniaste",

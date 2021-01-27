@@ -111,14 +111,17 @@ function arrayToLi(menuItems) {
     var renderedItems = '';
     for (const id in menuItems) {
         let menuItem = menuItems[id];
-        if (menuItem.hasOwnProperty('entries')) {
+        if (menuItem.hasOwnProperty('divider') && menuItem.divider) {
+            renderedItems += '<li class="divider"></li>'
+        } else if (menuItem.hasOwnProperty('entries')) {
             let list = '<ul class="dropdown-menu" aria-labelledby="' + menuItem.title.toString().replace(' ', '') + '">'
                 + arrayToLi(menuItem.entries) + '</ul>';
             renderedItems +='<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="' + menuItem.title.toString().replace(' ', '') + '">' +
                 menuItem.title.toString() +
                 ' <span class="caret"></span></a>' + list + '</li>';
         } else {
-            renderedItems += '<li><a class="menuItem" href="' + menuItem.url + '">' + menuItem.title + '</a></li>'
+            let url = (menuItem.hasOwnProperty('url') ? menuItem.url : menuItem.title.toLowerCase().replace(' ', '-'))
+            renderedItems += '<li><a class="menuItem" href="/#/' + url + '">' + menuItem.title + '</a></li>'
         }
     }
     return renderedItems;

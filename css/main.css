@@ -31,6 +31,7 @@
     padding-right: 1em;
     display: inline-flex;
     float: left;
+    max-width: 100%;
 }
 
 .entry > p {

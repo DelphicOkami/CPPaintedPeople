@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Home",
+    "url": "home"
+  },
+  {
+    "title": "Important People",
+    "entries": [
+      {
+        "title": "Taniaste",
+        "url": "bryn"
+      },
+      {
+        "title": "Winter Prince",
+        "url": "kayle"
+      },
+      {
+        "title": "Ymherawdwr",
+        "url": "cole"
+      }
+    ]
+  }
+]

@@ -17,7 +17,7 @@ function getPage(page) {
     PageContents.hide().empty();
     Loader.show();
     $.get(
-        "/pages/" + page + '.yaml',
+        "pages/" + page + '.yaml',
         // Success
         function (data) {
             let entries = jsyaml.load(data);
@@ -86,7 +86,7 @@ function setupModeSwitches() {
 function setupMenu() {
     let navLi = $('<ul class="nav navbar-nav">')
     $.get(
-        '/menu.json',
+        'menu.json',
         function (data) {
             navLi.append(arrayToLi(data))
             $('#navbar-main').prepend(navLi)
@@ -96,7 +96,7 @@ function setupMenu() {
             $('.menuItem').click(function (e) {
                 e.preventDefault();
                 let page = $(e.currentTarget).attr('href')
-                window.location = window.location.origin + '/#/' + page;
+                window.location = window.location.origin + window.location.pathname + '/#/' + page;
                 getPage(page);
             });
         }

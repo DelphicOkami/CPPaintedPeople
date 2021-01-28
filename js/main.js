@@ -1,18 +1,16 @@
-let Loader;
-let PageContents;
-let ErrorContents;
-let loading;
+let Loader, PageContents, ErrorContents, loading, NavbarToggle
 $(document).ready(function () {
     PageContents = $('#PageContents');
     Loader = $('#Loader');
     ErrorContents = $('<div class="row"><div class="col-md-12 error alwaysTyped entry">' +
         'It seems to me like you&apos;re looking for information we haven&apos;t recorded, how about you come and ask ' +
         'that sort of question rather than digging around in here.</div></div>')
+    NavbarToggle = $('.navbar-toggle');
     let page = ($(location).attr('hash').substring(2) || 'home');
     setupModeSwitches();
     getPage(page);
     setupMenu();
-    window.onhashchange = function() {
+    window.onhashchange = function () {
         getPage($(location).attr('hash').substring(2) || 'home')
     }
 });
@@ -66,24 +64,28 @@ function setupModeSwitches() {
         moon.hide();
         sun.show();
         $('link[href="css/darkly.css"]').attr('href', 'css/flatly.css');
+        closeOpenNavMenu()
     });
     sun.click(function (e) {
         e.preventDefault();
         moon.show();
         sun.hide();
         $('link[href="css/flatly.css"]').attr('href', 'css/darkly.css');
+        closeOpenNavMenu()
     });
     typed.click(function (e) {
         e.preventDefault();
         typed.hide();
         pen.show();
         $('link[href="css/typed.css"]').attr('href', 'css/byhand.css');
+        closeOpenNavMenu()
     });
     pen.click(function (e) {
         e.preventDefault();
         typed.show();
         pen.hide();
         $('link[href="css/byhand.css"]').attr('href', 'css/typed.css');
+        closeOpenNavMenu()
     });
 }
 
@@ -101,7 +103,7 @@ function setupMenu() {
                 e.preventDefault();
                 let page = $(e.currentTarget).attr('href')
                 window.location = window.location.origin + window.location.pathname + '#/' + page;
-                // getPage(page);
+                closeOpenNavMenu()
             });
         }
     );
@@ -116,7 +118,7 @@ function arrayToLi(menuItems) {
         } else if (menuItem.hasOwnProperty('entries')) {
             let list = '<ul class="dropdown-menu" aria-labelledby="' + menuItem.title.toString().replace(' ', '') + '">'
                 + arrayToLi(menuItem.entries) + '</ul>';
-            renderedItems +='<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="' + menuItem.title.toString().replace(' ', '') + '">' +
+            renderedItems += '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="' + menuItem.title.toString().replace(' ', '') + '">' +
                 menuItem.title.toString() +
                 ' <span class="caret"></span></a>' + list + '</li>';
         } else {
@@ -125,4 +127,10 @@ function arrayToLi(menuItems) {
         }
     }
     return renderedItems;
+}
+
+function closeOpenNavMenu() {
+    if (NavbarToggle.is(':visible') && NavbarToggle.attr('aria-expanded') == "true") {
+        NavbarToggle.click();
+    }
 }

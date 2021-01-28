@@ -48,12 +48,6 @@
       },
       {
         "title": "Warriors"
-      },
-      {
-        "divider": "true"
-      },
-      {
-        "title": "Alchemists"
       }
     ]
   },
@@ -61,36 +55,25 @@
     "title": "The Others",
     "entries": [
       {
-        "title": "The Akesh",
-        "url": "akesh"
+        "title": "Akesh"
       },
       {
-        "title": "The Al-Gaia",
-        "url": "al-gaia"
+        "title": "Al-Gaia"
       },
       {
-        "title": "The Empire",
-        "url": "empire"
+        "title": "Jhereg"
       },
       {
-        "title": "The Jhereg",
-        "url": "jhereg"
+        "title": "Lions"
       },
       {
-        "title": "The Lions",
-        "url": "lions"
+        "title": "Mercenaries"
       },
       {
-        "title": "The Mercenaries",
-        "url": "mercenaries"
+        "title": "Norscans"
       },
       {
-        "title": "The Norscans",
-        "url": "norscans"
-      },
-      {
-        "title": "The Teutonians",
-        "url": "teutonians"
+        "title": "Teutonians"
       },
       {
         "title": "The Steppe Alliance",

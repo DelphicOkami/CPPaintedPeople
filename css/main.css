@@ -46,3 +46,7 @@
     font-family: 'Dancing Script', arial, serif;
     font-size: 2em
 }
+
+.navbar-right>li {
+    float: left;
+}

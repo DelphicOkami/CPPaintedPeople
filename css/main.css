@@ -35,7 +35,7 @@
 }
 
 .entry > p {
-    display: inline-block;
+    display: block;
 }
 
 .entry > :first-child{

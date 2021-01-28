@@ -64,28 +64,28 @@ function setupModeSwitches() {
         moon.hide();
         sun.show();
         $('link[href="css/darkly.css"]').attr('href', 'css/flatly.css');
-        closeOpenNavMenu()
+        closeOpenNavMenu();
     });
     sun.click(function (e) {
         e.preventDefault();
         moon.show();
         sun.hide();
         $('link[href="css/flatly.css"]').attr('href', 'css/darkly.css');
-        closeOpenNavMenu()
+        closeOpenNavMenu();
     });
     typed.click(function (e) {
         e.preventDefault();
         typed.hide();
         pen.show();
         $('link[href="css/typed.css"]').attr('href', 'css/byhand.css');
-        closeOpenNavMenu()
+        closeOpenNavMenu();
     });
     pen.click(function (e) {
         e.preventDefault();
         typed.show();
         pen.hide();
         $('link[href="css/byhand.css"]').attr('href', 'css/typed.css');
-        closeOpenNavMenu()
+        closeOpenNavMenu();
     });
 }
 
@@ -103,7 +103,7 @@ function setupMenu() {
                 e.preventDefault();
                 let page = $(e.currentTarget).attr('href')
                 window.location = window.location.origin + window.location.pathname + '#/' + page;
-                closeOpenNavMenu()
+                closeOpenNavMenu();
             });
         }
     );

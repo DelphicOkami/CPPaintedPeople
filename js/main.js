@@ -29,7 +29,7 @@ function getPage(page) {
                 let signedBy = (entry.author || 'Anonymous');
                 let unsigned = entry.hasOwnProperty('unsigned') && entry.unsigned;
                 renderedEntry.html(marked(entry.content))
-                    .addClass(signedBy.toLowerCase())
+                    .addClass(signedBy.toLowerCase().replace(' ', '-'))
                     .addClass('entry')
                     .addClass('col-md-12');
                 if (entry.hasOwnProperty('class')) {

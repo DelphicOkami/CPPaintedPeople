@@ -8,15 +8,15 @@
     "entries": [
       {
         "title": "Taniaste",
-        "url": "bryn"
+        "url": "walking-legends/bryn"
       },
       {
         "title": "Winter Prince",
-        "url": "kayle"
+        "url": "walking-legends/kayle"
       },
       {
         "title": "Ymherawdwr",
-        "url": "cole"
+        "url": "walking-legends/cole"
       }
     ]
   },
@@ -24,19 +24,24 @@
     "title": "The 4 Nations",
     "entries": [
       {
-        "title": "Caledonia"
+        "title": "Caledonia",
+        "url": "the-4-nations/caledonia"
       },
       {
-        "title": "Cymrja"
+        "title": "Cymrja",
+        "url": "the-4-nations/cymrja"
       },
       {
-        "title": "Erin"
+        "title": "Erin",
+        "url": "the-4-nations/erin"
       },
       {
-        "title": "Manx"
+        "title": "Manx",
+        "url": "the-4-nations/manx"
       },
       {
-        "title": "Map"
+        "title": "Map",
+        "url": "the-4-nations/map"
       }
     ]
   },
@@ -44,13 +49,16 @@
     "title": "Our People",
     "entries": [
       {
-        "title": "Bards"
+        "title": "Bards",
+        "url": "our-people/bards"
       },
       {
-        "title": "Druids"
+        "title": "Druids",
+        "url": "our-people/druids"
       },
       {
-        "title": "Warriors"
+        "title": "Warriors",
+        "url": "our-people/warriors"
       }
     ]
   },
@@ -58,29 +66,36 @@
     "title": "The Others",
     "entries": [
       {
-        "title": "Al-Gaia"
+        "title": "Akesh",
+        "url": "the-others/akesh"
       },
       {
-        "title": "Akesh"
+        "title": "Al-Gaia",
+        "url": "the-others/al-gaia"
       },
       {
-        "title": "Albion"
+        "title": "Albion",
+        "url": "the-others/albion"
       },
       {
-        "title": "Jhereg"
+        "title": "Jhereg",
+        "url": "the-others/jhereg"
       },
       {
-        "title": "Mercenaries"
+        "title": "Mercenaries",
+        "url": "the-others/mercenaries"
       },
       {
-        "title": "Norscans"
+        "title": "Norscans",
+        "url": "the-others/norscans"
       },
       {
-        "title": "Teutonians"
+        "title": "Teutonians",
+        "url": "the-others/teutonians"
       },
       {
         "title": "The Steppe Alliance",
-        "url": "steppe"
+        "url": "the-others/steppe"
       }
     ]
   }

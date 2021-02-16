@@ -19,16 +19,21 @@ function getPage(page) {
     PageContents.hide().empty();
     Loader.show();
     loading = $.get(
-        "pages/" + page + '.yaml',
+        "pages/" + page + '/page.json',
         // Success
-        function (data) {
-            let entries = jsyaml.load(data);
+        function (entries) {
             for (const entryNo in entries) {
                 let entry = entries[entryNo];
                 let renderedEntry = $('<div/>');
                 let signedBy = (entry.author || 'Anonymous');
                 let unsigned = entry.hasOwnProperty('unsigned') && entry.unsigned;
-                renderedEntry.html(marked(entry.content))
+                let content = $.ajax({
+                    type: "GET",
+                    url: 'pages/' + page + '/' + entry.content,
+                    cache: false,
+                    async: false
+                }).responseText;
+                renderedEntry.html(marked(content))
                     .addClass(signedBy.toLowerCase().replaceAll(' ', '-'))
                     .addClass('entry')
                     .addClass('col-md-12');

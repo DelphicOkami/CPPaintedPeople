@@ -29,19 +29,24 @@ function getPage(page) {
                 let signedBy = (entry.author || 'Anonymous');
                 let unsigned = entry.hasOwnProperty('unsigned') && entry.unsigned;
                 renderedEntry.html(marked(entry.content))
-                    .addClass(signedBy.toLowerCase().replace(' ', '-'))
+                    .addClass(signedBy.toLowerCase().replaceAll(' ', '-'))
                     .addClass('entry')
                     .addClass('col-md-12');
                 if (entry.hasOwnProperty('class')) {
                     renderedEntry.addClass(entry.class);
                 }
                 if (!unsigned) {
-                    $('<span class="signed"><span>' + signedBy.replace('_', ' ') + '</span></span>')
+                    $('<span class="signed"><span>' + signedBy.replaceAll('_', ' ') + '</span></span>')
                         .appendTo(renderedEntry);
                 }
                 let row = $('<div class="row"/>');
                 renderedEntry.appendTo(row);
                 row.appendTo(PageContents);
+
+                $('#PageContents img').each(function(index, image) {
+                    let imageObject = $(image)
+                    imageObject.addClass(imageObject.attr('alt').toLowerCase().replaceAll(' ', '-'))
+                })
             }
         }
     )
@@ -116,13 +121,13 @@ function arrayToLi(menuItems) {
         if (menuItem.hasOwnProperty('divider') && menuItem.divider) {
             renderedItems += '<li class="divider"></li>'
         } else if (menuItem.hasOwnProperty('entries')) {
-            let list = '<ul class="dropdown-menu" aria-labelledby="' + menuItem.title.toString().replace(' ', '') + '">'
+            let list = '<ul class="dropdown-menu" aria-labelledby="' + menuItem.title.toString().replaceAll(' ', '') + '">'
                 + arrayToLi(menuItem.entries) + '</ul>';
-            renderedItems += '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="' + menuItem.title.toString().replace(' ', '') + '">' +
+            renderedItems += '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="' + menuItem.title.toString().replaceAll(' ', '') + '">' +
                 menuItem.title.toString() +
                 ' <span class="caret"></span></a>' + list + '</li>';
         } else {
-            let url = (menuItem.hasOwnProperty('url') ? menuItem.url : menuItem.title.toLowerCase().replace(' ', '-'))
+            let url = (menuItem.hasOwnProperty('url') ? menuItem.url : menuItem.title.toLowerCase().replaceAll(' ', '-'))
             renderedItems += '<li><a class="menuItem" href="' + url + '">' + menuItem.title + '</a></li>'
         }
     }

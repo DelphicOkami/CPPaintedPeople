@@ -1,0 +1,22 @@
+{
+  "name": "cppaintedpeople",
+  "version": "1.0.0",
+  "description": "This contains the pages for the Fir Cruthen faction at Curious Pastimes LARP",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DelphicOkami/CPPaintedPeople.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DelphicOkami/CPPaintedPeople/issues"
+  },
+  "homepage": "https://github.com/DelphicOkami/CPPaintedPeople#readme",
+  "devDependencies": {
+    "local-web-server": "^4.2.1"
+  }
+}
